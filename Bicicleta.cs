@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bicicleta : MonoBehaviour
 {
     public float forceAmount = 10f;
-    private Rigidbody rb;
+    Rigidbody rb;
 
     void Start()
     {
@@ -17,10 +17,10 @@ public class Bicicleta : MonoBehaviour
         bool aPressed = Input.GetKey(KeyCode.A);
         bool dPressed = Input.GetKey(KeyCode.D);
 
-        // Verifica se ambas est„o pressionadas AO MESMO TEMPO
+        // Verifica se ambas est√£o pressionadas AO MESMO TEMPO
         if (aPressed && dPressed)
         {
-            // Aplica forÁa para frente
+            // Aplica for√ßa para frente
             rb.AddForce(transform.forward * forceAmount, ForceMode.Acceleration);
         }
     }
